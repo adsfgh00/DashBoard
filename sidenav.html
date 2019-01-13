@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"></link>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="css/bootstrap.min.css"></link>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -17,10 +19,24 @@ body {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 20px;
+  padding-top: 170px;
 }
 
-.sidenav a {
+.topmenu {
+  height: 20%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-image:url('topbg.png');
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+  padding-top: 0px;
+
+}
+
+.sidemenu a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
   font-size: 25px;
@@ -28,14 +44,21 @@ body {
   display: block;
 }
 
+.topmenu a {
+  padding: 3px 0px 0px 0px;
+  text-decoration: none;
+  font-size: 18px;
+  color: #CD5C5C;
+  display: block;
+  text-align: center;
+}
 
-.panel {
-  padding: 6px 6px 6px 40px;
+
+.collapse {
   text-decoration: none;
   font-size: 25px;
   color: #818181;
   display: none;
-  line-height: 30px;
 }
 
 .sidenav a:hover {
@@ -55,43 +78,36 @@ body {
 <body>
 
 <div class="sidenav">
-  <a href="#">Dashboard</a>
-  <a href="#">Candidates</a>
-  <a href="#">Accounts</a>
-  <a href="#">Voters</a>
-  <div1 class="accordion"><a href="#">Miscellaneous</a></div1>
-    <div class="panel">
-    <a href="#">College</a>
-    <a href="#">Position</a>
-    <a href="#">Parties</a>
-  </div>
-
-  <script>
-  var acc = document.getElementsByClassName("accordion");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "none") {
-        panel.style.display = "block";
-      } else {
-        panel.style.display = "none";
-      }
-    });
-  }
-</script>
-  <a href="#">Settings</a>
+	<div class="topmenu">
+		<img src="ue logo.png" alt="ue logo" style="width: 70px; margin-left: 90px; margin-top: 10px">
+		<a href="#">Name</a>
+		<a href="#">Placeholer</a>
+	</div>
+	<div class="sidemenu">
+  		<a href="#">Dashboard</a>
+  		<a href="#">Candidates</a>
+  		<a href="#">Accounts</a>
+  		<a href="#">Voters</a>
+  		<div1 class="accordion">
+  			<a href="#demo" data-toggle="collapse">Miscellaneous</a>
+  		</div1>
+    	<div id="demo" class="collapse" style="background-color: #111;">
+    		<a href="#" style="margin-left: 40px ">College</a>
+    		<a href="#" style="margin-left: 40px ">Position</a>
+    		<a href="#" style="margin-left: 40px ">Parties</a>
+  		</div>
+  		<a href="#">Settings</a>
+  	</div>
 </div>
 <div class="main">
-<nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-    <li class="breadcrumb-item"><a href="#">Placeholder</a></li>
-    <li class="breadcrumb-item active" aria-current="page">Placeholder</li>
-  </ol>
-</nav>
+	<nav aria-label="breadcrumb">
+  	<ol class="breadcrumb">
+    	<li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+    	<li class="breadcrumb-item"><a href="#">Placeholder</a></li>
+    	<li class="breadcrumb-item active" aria-current="page">Placeholder</li>
+  	</ol>
+	</nav>
+	<p style="margin-left: 20px; font-weight: bold; font-size: 40px">Contents</p>
 </div>
    
 </body>
